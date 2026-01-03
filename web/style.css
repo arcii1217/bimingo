@@ -6,25 +6,24 @@ body {
 
 #board {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(4, 80px);
-  gap: 8px;
+  grid-template-columns: repeat(4, 90px);
+  gap: 10px;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .cell {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border: 6px solid #aaa;
-  box-sizing: border-box;
   background: #ddd;
+  cursor: pointer;
 }
 
-.cell[data-front="Y"] { background: #ffd400; }
-.cell[data-front="B"] { background: #1e5bff; }
-.cell[data-front="R"] { background: #e53935; }
+.cell.front-Y { background: #ffd400; }
+.cell.front-B { background: #1e5bff; }
+.cell.front-R { background: #e53935; }
 
-.cell[data-back="Y"] { border-color: #ffd400; }
-.cell[data-back="B"] { border-color: #1e5bff; }
-.cell[data-back="R"] { border-color: #e53935; }
+.cell.back-Y { border-color: #ffd400; }
+.cell.back-B { border-color: #1e5bff; }
+.cell.back-R { border-color: #e53935; }
