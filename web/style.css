@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 8px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  border: 6px solid #aaa;
+  box-sizing: border-box;
+  background: #ddd;
+}
+
+.cell[data-front="Y"] { background: #ffd400; }
+.cell[data-front="B"] { background: #1e5bff; }
+.cell[data-front="R"] { background: #e53935; }
+
+.cell[data-back="Y"] { border-color: #ffd400; }
+.cell[data-back="B"] { border-color: #1e5bff; }
+.cell[data-back="R"] { border-color: #e53935; }
